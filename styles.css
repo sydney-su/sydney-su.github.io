@@ -13,7 +13,7 @@
 
 /* Body */
 body {
-    background-color: #f9fdd9fe; /* Light gray background */
+    background-color: #d3d9d4; /* Light gray background */
     font-size: 16px;
     color: #182B49; /* UCSD Blue */
     padding: 20px;
@@ -34,8 +34,8 @@ header h1 {
 
 /* Navigation Bar */
 nav {
-    background-color: #3b8c52;
-    padding: 15px 0;
+    background-color: #124e66;
+    padding: 18px 0;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     margin-top: 0px;
@@ -44,17 +44,25 @@ nav {
 }
 
 .name {
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 18px;
+    font-weight: 600;
     color: white; /* Adjust as needed */
-    margin-left: 300px;
-    margin-right: 40px;
+    margin-left: 210px;
+    margin-right: 135px;
 }
 
 .nav-container{
     display: flex;
     align-items: center;
     justify-content: flex-start;
+}
+
+.buttons-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 20px;
+    margin-left: 20px;
 }
 
 .nav-links {
@@ -65,7 +73,7 @@ nav {
 }
 
 .nav-links li {
-    margin: 0 20px;
+    margin: 0 25px;
 }
 
 .nav-links a {
@@ -73,9 +81,36 @@ nav {
     color: white;
 }
 
-.nav-links a:hover {
-    color: #ffda85;
+.name a {
+    text-decoration: none;
+    color: white;
 }
+
+a {
+    position: relative;
+    text-decoration: none; /* Remove default underline */
+    color: #ffffff;
+    display: inline-block;
+}
+  
+a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -0.5em;
+    width: 95%; /* Adjust this for the desired underline length */
+    height: 3px;
+    background: #d3d9d4;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.2s ease-in-out;
+    transform: translateX(-50%) scaleX(0);
+}
+
+a:hover::after{ 
+    transform: translateX(-50%) scaleX(1);
+}
+
 
 nav ul {
     list-style: none;
@@ -91,12 +126,16 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 1.1rem;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
+    color: #ffda85; /* UCSD Gold */
+}
+
+.name a:hover{
     color: #ffda85; /* UCSD Gold */
 }
 
@@ -141,7 +180,7 @@ ul {
 
 /* Buttons */
 button {
-    background-color: #C69214; /* UCSD Gold */
+    background-color: #748D92; /* UCSD Gold */
     color: white;
     border: none;
     padding: 10px 15px;
