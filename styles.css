@@ -41,6 +41,7 @@ nav {
     margin-top: 0px;
     margin-left: 20px;
     margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 .name {
@@ -61,6 +62,14 @@ nav {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.resume-container{
+    display: flex;
+    align-items: flex-start;
+    justify-content:center;
     margin-top: 20px;
     margin-left: 20px;
 }
@@ -163,7 +172,7 @@ h4 {
     padding-top: 20px;
     margin-bottom: 15px;
     text-align: left;
-    margin-left: 500px;
+    margin-left: 490px;
     margin-right: 20px;
 }
 
