@@ -6,10 +6,9 @@
     <title>Sydney Su - Resume</title> <!-- the content here will only show in the tab and in the metadata about the page -->
     <link rel="icon" href="media\compass.png">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="reset.css" rel="stylesheet" type="text/css" />
     <link href="styles.css" rel="stylesheet" type="text/css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 
@@ -26,12 +25,34 @@
         </div>
     </nav>
 
+    <!--
     <div class="resume-container">
         <embed src="Sydney_Su_CV.pdf#toolbar=0" width="800" height="1050">
     </div>
+    -->
+
+    <!-- Button to Open Modal -->
+    <div class="resume-container">
+        <span class="flex_text">view my "boring" resume here:</span>
+        <button class="open-button" onclick="openModal()">click me</button>
+    </div>
+    
+
+    <!-- The Modal -->
+    <div id="pdfModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="pdf-container">
+                <embed src="Sydney_Su_CV.pdf#toolbar=1" type="application/pdf">
+            </div>
+        </div>
+    </div>
+
+    <h4>my cool resume coming soon...</h4>
     
     
 
+<script src="popup.js"></script>
 </body>
 
 
