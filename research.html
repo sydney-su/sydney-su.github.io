@@ -1,36 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
 <head>
-    <title>Sydney Su - Projects</title> <!-- the content here will only show in the tab and in the metadata about the page -->
-    <link rel="icon" href="media\compass.png">
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="reset.css" rel="stylesheet" type="text/css" />
-    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <title>Sydney Su - Research</title>
+    <link href="css/shared-styles.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
-
-<body>   
+<body>
     <nav>
         <div class="nav-container">
-            <span class="name">Sydney Su</span>
+            <a href="index.html" class="nav-brand">Sydney Su</a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="resume.html">Resume</a></li>
                 <li><a href="projects.html">Projects</a></li>
-                <li><a href="research.html"><span style="color: #f8bc0a;">Research</span></a></li>
+                <li><a href="research.html" class="active">Research</a></li>
             </ul>
         </div>
     </nav>
-    
-    <h4>I am currently doing machine learning research with Algoverse! <br>
-        Did some work with finetuning LLMs to TikZ code with GROP and RL techniques to be able to solve challenging problems with diagrams <br>
-        Doing some work with diffusion models for face privacy protection <br>
-        More updates coming soon...</h4>
 
+    <div class="container">
+        <div class="content-section">
+            <h1><i class="fas fa-microscope"></i> Research Work</h1>
+            
+            <!-- Featured Publication -->
+            <div class="card" style="border: 2px solid #10b981; background: linear-gradient(135deg, #1f2937, #374151);">
+                <h2><i class="fas fa-scroll"></i> Featured Publication</h2>
+                <div style="margin: 1.5rem 0;">
+                    <h3 style="color: #10b981; margin-bottom: 1rem;">FaceSafe: An Inpainting Pipeline for Privacy-Compliant Scalable Image Datasets</h3>
+                    <p style="margin-bottom: 1rem; font-style: italic;">
+                        <strong>Authors:</strong> Ananya Salian*, <strong style="color: #10b981;">Sydney Su*</strong>, Roger You, Lening Nick Cui, Patrick Cui, Charles Duong, Vasu Sharma, Sean O'Brien, Kevin Zhu<br>
+                        <span style="font-size: 0.9rem; color: #9ca3af;">*Equal contribution (Co-first authors)</span>
+                    </p>
+                    <p style="margin-bottom: 1.5rem;">
+                        A novel privacy-preserving transformation pipeline using <strong style="color: #0ea5e9;">diffusion-based inpainting models</strong> to systematically replace detected faces in images with synthetic variants, ensuring legal compliance while maintaining dataset utility.
+                    </p>
+                    <div style="text-align: center;">
+                        <a href="https://openreview.net/pdf?id=nWCsJdKoUs" target="_blank" class="btn" style="background: #10b981; font-size: 1.1rem; padding: 1rem 2rem;">
+                            <i class="fas fa-file-pdf"></i> View Paper on OpenReview
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2><i class="fas fa-brain"></i> Machine Learning Research</h2>
+                <p><strong>Current Position:</strong> Machine Learning Researcher at Algoverse AI</p>
+                
+                <div style="margin-top: 2rem;">
+                    <h3><i class="fas fa-diagram-project"></i> Research Areas</h3>
+                    <ul style="text-align: left; margin-left: 2rem; margin-top: 1rem;">
+                        <li style="margin-bottom: 1rem;">
+                            <strong>Privacy-Preserving AI:</strong><br>
+                            Developed novel diffusion-based inpainting pipelines for face anonymization in large-scale datasets, addressing legal compliance requirements while maintaining data utility. <em>Published work featured above.</em>
+                        </li>
+                        <li style="margin-bottom: 1rem;">
+                            <strong>LLM Fine-tuning for Technical Diagrams:</strong><br>
+                            Working with GROP and Reinforcement Learning techniques to enable LLMs to solve challenging problems involving diagrams and visual representations, specifically for TikZ code generation.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3><i class="fas fa-clock"></i> Updates Coming Soon</h3>
+                <p>More detailed research findings and publications will be added as projects progress and papers are published. Stay tuned for exciting developments in machine learning research!</p>
+            </div>
+            
+            <div class="buttons-container">
+                <a href="resume.html" class="btn">
+                    <i class="fas fa-file-alt"></i> View My Resume
+                </a>
+                <a href="projects.html" class="btn btn-secondary">
+                    <i class="fas fa-code"></i> See My Projects
+                </a>
+            </div>
+        </div>
+    </div>
 </body>
-
-
 </html>

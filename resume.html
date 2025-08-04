@@ -1,59 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
 <head>
-    <title>Sydney Su - Resume</title> <!-- the content here will only show in the tab and in the metadata about the page -->
-    <link rel="icon" href="media\compass.png">
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="reset.css" rel="stylesheet" type="text/css" />
-    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <title>Sydney Su - Resume Infographic</title>
+    <link href="css/shared-styles.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* Dark Gray Background */
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.6rem;
+            top: 0.8rem;
+            width: 1.25rem;
+            height: 1.25rem;
+            border-radius: 50%;
+            background-color: #036d4b; /* Emerald-600 */
+            border: 4px solid #1f2937; /* Gray-800 */
+        }
+        
+        /* Ensure navigation integrates well with resume */
+        body nav {
+            margin-bottom: 0;
+        }
+        
+        /* Remove timeline dot for specific items */
+        .timeline-item.no-dot::before {
+            content: none !important;
+            display: none !important;
+            visibility: hidden !important;
+        }
+    </style>
 </head>
+<body class="text-gray-300">
 
-
-<body>
     <nav>
         <div class="nav-container">
-            <span class="name">Sydney Su</span>
+            <a href="index.html" class="nav-brand">Sydney Su</a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="resume.html"><span style="color: #f8bc0a;">Resume</span></a></li>
+                <li><a href="resume.html" class="active">Resume</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="research.html">Research</a></li>
             </ul>
         </div>
     </nav>
 
-    <!--
-    <div class="resume-container">
-        <embed src="Sydney_Su_CV.pdf#toolbar=0" width="800" height="1050">
-    </div>
-    -->
-
-    <!-- Button to Open Modal -->
-    <div class="resume-container">
-        <span class="flex_text">view my professional resume here:</span>
-        <button class="open-button" onclick="openModal()">click me</button>
-    </div>
-    
-
-    <!-- The Modal -->
-    <div id="pdfModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <div class="pdf-container">
-                <embed src="Sydney_Su_CV.pdf#toolbar=1" type="application/pdf">
+    <div class="container mx-auto p-4 md:p-8 max-w-6xl">
+        
+        <!-- Header Section -->
+        <header class="flex flex-col md:flex-row items-center mb-16">
+            <img src="images/profilepic.jpeg" alt="Sydney Su" class="w-32 h-32 rounded-full border-4 border-emerald-600 object-cover mb-4 md:mb-0 md:mr-8">
+            <div>
+                <h1 class="text-4xl md:text-5xl font-bold text-white">Sydney Su</h1>
+                <p class="text-xl text-emerald-500 mt-1">Computer Science Student & Aspiring AI/ML Engineer</p>
+                <div class="flex space-x-4 mt-4 text-gray-400">
+                    <a href="mailto:scsu@ucsd.edu" class="hover:text-emerald-500 transition-colors"><i class="fas fa-envelope"></i> scsu@ucsd.edu</a>
+                    <a href="https://www.linkedin.com/in/sydney-c-su/" target="_blank" class="hover:text-emerald-500 transition-colors"><i class="fab fa-linkedin"></i> sydney-c-su</a>
+                    <a href="https://www.github.com/sydney-su" target="_blank" class="hover:text-emerald-500 transition-colors"><i class="fab fa-github"></i> sydney-su</a>
+                    <a href="https://sydney-su.github.io/" target="_blank" class="hover:text-emerald-500 transition-colors"><i class="fas fa-globe"></i> sydney-su.github.io</a>
+                </div>
             </div>
-        </div>
+        </header>
+
+        <main class="space-y-12">
+            <!-- Top Row: Education & Skills -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Education Card -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg h-full">
+                    <h2 class="text-2xl font-bold text-white border-b-2 border-emerald-600 pb-2 mb-4"><i class="fas fa-graduation-cap mr-2"></i>Education</h2>
+                    <h3 class="text-lg font-semibold text-emerald-500">University of California, San Diego</h3>
+                    <p class="font-medium">B.S. in Computer Science</p>
+                    <p class="text-sm text-gray-400">Est. Grad: June 2026</p>
+                    <p class="text-sm font-bold mt-2">GPA: 3.98</p>
+                    <div class="mt-4">
+                        <h4 class="font-semibold text-white mb-2">Key Coursework:</h4>
+                        <ul class="list-disc list-outside text-sm space-y-1 text-gray-400 pl-5">
+                            <li>Deep Reinforcement Learning</li>
+                            <li>Machine Learning Algorithms</li>
+                            <li>Advanced Data Structures</li>
+                            <li>Computer Vision & NLP</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Skills Card -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg h-full">
+                    <h2 class="text-2xl font-bold text-white border-b-2 border-emerald-600 pb-2 mb-4"><i class="fas fa-cogs mr-2"></i>Skills</h2>
+                    <div>
+                        <h3 class="font-semibold text-emerald-500 mb-2">Languages</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-700 text-emerald-400 text-sm font-medium px-3 py-1 rounded-full">Python</span>
+                            <span class="bg-gray-700 text-emerald-400 text-sm font-medium px-3 py-1 rounded-full">SQL</span>
+                            <span class="bg-gray-700 text-emerald-400 text-sm font-medium px-3 py-1 rounded-full">C++</span>
+                            <span class="bg-gray-700 text-emerald-400 text-sm font-medium px-3 py-1 rounded-full">Java</span>
+                            <span class="bg-gray-700 text-emerald-400 text-sm font-medium px-3 py-1 rounded-full">HTML/CSS</span>
+                            <span class="bg-gray-700 text-emerald-400 text-sm font-medium px-3 py-1 rounded-full">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="font-semibold text-emerald-500 mb-2">Technologies & Frameworks</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-700 text-sky-400 text-sm font-medium px-3 py-1 rounded-full">Git</span>
+                            <span class="bg-gray-700 text-sky-400 text-sm font-medium px-3 py-1 rounded-full">Linux</span>
+                            <span class="bg-gray-700 text-sky-400 text-sm font-medium px-3 py-1 rounded-full">Pandas</span>
+                            <span class="bg-gray-700 text-sky-400 text-sm font-medium px-3 py-1 rounded-full">NumPy</span>
+                            <span class="bg-gray-700 text-sky-400 text-sm font-medium px-3 py-1 rounded-full">TensorFlow</span>
+                            <span class="bg-gray-700 text-sky-400 text-sm font-medium px-3 py-1 rounded-full">Scikit-learn</span>
+                            <span class="bg-gray-700 text-sky-400 text-sm font-medium px-3 py-1 rounded-full">Flask</span>
+                            <span class="bg-gray-700 text-sky-400 text-sm font-medium px-3 py-1 rounded-full">React</span>
+                            <span class="bg-gray-700 text-sky-400 text-sm font-medium px-3 py-1 rounded-full">PostgreSQL</span>
+                            <span class="bg-gray-700 text-sky-400 text-sm font-medium px-3 py-1 rounded-full">Databricks</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Professional Experience Card -->
+            <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                <h2 class="text-2xl font-bold text-white border-b-2 border-emerald-600 pb-2 mb-6"><i class="fas fa-briefcase mr-2"></i>Professional Experience</h2>
+                <div class="relative border-l-2 border-gray-700 pl-10 space-y-10">
+                    <!-- Rivian Experience -->
+                    <div class="timeline-item no-dot">
+                        <div class="flex items-center space-x-4">
+                            <img src="images/rivian_vw_group_logo.jpeg" alt="Rivian Logo" class="w-12 h-12 rounded-lg object-cover">
+                            <div>
+                                <h3 class="text-lg font-bold text-white">Software Engineer Intern</h3>
+                                <p class="font-semibold text-emerald-500">Rivian & Volkswagen Group Technologies</p>
+                                <p class="text-sm text-gray-400">June 2025 - Present</p>
+                            </div>
+                        </div>
+                        <ul class="mt-4 list-disc list-outside text-gray-400 space-y-2 pl-5">
+                            <li>Built an <strong class="text-sky-500">AI assistant</strong> with <strong class="text-sky-500">agentic RAG</strong> delivering contextual <strong class="text-sky-500">Slack support</strong> by retrieving and reasoning over internal code, documentation, and discussions using <strong class="text-sky-500">LangChain</strong> and <strong class="text-sky-500">vector embeddings</strong></li>
+                            <li>Developed production <strong class="text-sky-500">FastAPI microservice</strong> with <strong class="text-sky-500">async Socket Mode</strong> integration for real-time Slack events, implementing custom <strong class="text-sky-500">rate limiting</strong> and <strong class="text-sky-500">concurrent message processing</strong> using <strong class="text-sky-500">AsyncIO patterns</strong></li>
+                            <li>Engineered scheduled <strong class="text-sky-500">Databricks Asset Bundle (DAB)</strong> pipelines for multi-source data extraction/cleansing with <strong class="text-sky-500">MLflow integration</strong> for scalable experimentation and <strong class="text-sky-500">model tracking</strong></li>
+                            <li>Deployed full <strong class="text-sky-500">dev-to-prod CI/CD pipeline</strong> with automated testing (<strong class="text-sky-500">pytest/mypy</strong>), multi-stage deployments, and <strong class="text-sky-500">Infrastructure-as-Code</strong> using enterprise <strong class="text-sky-500">Databricks workflows</strong> and <strong class="text-sky-500">Poetry dependency management</strong></li>
+                            <li class="text-emerald-400 font-medium">Key Achievement: Achieved <strong class="text-emerald-500">60% automation</strong> of developer support tasks, enabling senior developers to focus on high-value productivity work while delivering <strong class="text-emerald-500">$78,000 in operational cost savings</strong> through reduced manual intervention</li>
+                        </ul>
+                        <a href="https://sydneysu-rvtech.github.io/data-ai-hub-agent/" target="_blank" class="inline-flex items-center px-4 py-2 mt-3 text-sm font-medium text-emerald-500 bg-gray-700 border border-emerald-500 rounded-lg hover:bg-emerald-500 hover:text-white transition-all duration-200">
+                            <i class="fas fa-external-link-alt mr-2"></i>View on GitHub Pages
+                        </a>
+                    </div>
+                    <!-- Algoverse AI Experience -->
+                    <div class="timeline-item">
+                         <div class="flex items-center space-x-4">
+                            <img src="images/algoverse_logo.png" alt="Algoverse AI Logo" class="w-12 h-12 rounded-lg object-cover">
+                            <div>
+                                <h3 class="text-lg font-bold text-white">Machine Learning Researcher</h3>
+                                <p class="font-semibold text-emerald-500">Algoverse AI</p>
+                                <p class="text-sm text-gray-400">Jan 2025 - July 2025</p>
+                            </div>
+                        </div>
+                        <ul class="mt-4 list-disc list-outside text-gray-400 space-y-2 pl-5">
+                            <li>Developed <strong class="text-sky-500">FaceSafe</strong>, a novel privacy-preserving transformation pipeline using <strong class="text-sky-500">diffusion-based inpainting models</strong> to systematically replace detected faces with synthetic variants</li>
+                            <li class="text-emerald-400 font-medium">Key Achievement: <strong class="text-emerald-500">Co-first author</strong> on paper accepted to <strong class="text-emerald-500">ICML DIG-BUGS 2025</strong>, addressing legal compliance requirements (BIPA, Texas Biometric Identifier Act) while advancing privacy-preserving AI and ethical dataset creation for the international machine learning community</li>
+                        </ul>
+                        <a href="https://openreview.net/pdf?id=nWCsJdKoUs" target="_blank" class="inline-flex items-center px-4 py-2 mt-3 text-sm font-medium text-emerald-500 bg-gray-700 border border-emerald-500 rounded-lg hover:bg-emerald-500 hover:text-white transition-all duration-200">
+                            <i class="fas fa-external-link-alt mr-2"></i>View on OpenReview
+                        </a>
+                    </div>
+                    <!-- Western Digital Experience -->
+                    <div class="timeline-item">
+                         <div class="flex items-center space-x-4">
+                            <img src="images/western_digital_logo.jpeg" alt="Western Digital Logo" class="w-12 h-12 rounded-lg object-cover">
+                            <div>
+                                <h3 class="text-lg font-bold text-white">Data Engineer Intern</h3>
+                                <p class="font-semibold text-emerald-500">Western Digital</p>
+                                <p class="text-sm text-gray-400">May 2024 - Jan 2025</p>
+                            </div>
+                        </div>
+                        <ul class="mt-4 list-disc list-outside text-gray-400 space-y-2 pl-5">
+                            <li>Leveraged SQL & Python for data manipulation and real-time fault detection.</li>
+                            <li class="text-emerald-400 font-medium">Key Achievement: Classified process anomalies, resulting in a 99% reduction in failed batch yield.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projects Card -->
+            <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                <h2 class="text-2xl font-bold text-white border-b-2 border-emerald-600 pb-2 mb-6"><i class="fas fa-project-diagram mr-2"></i>Projects</h2>
+                <div class="space-y-6">
+                    <!-- Project 1 -->
+                    <div>
+                        <h3 class="text-lg font-bold text-white">Multi-Agent Intersection Simulation</h3>
+                        <p class="mt-2 text-gray-400">Developed a multi-agent simulation using highway-env to model autonomous driving behaviors. Explored Deep RL algorithms (PPO, SAC, DQN) and engineered a custom reward function to evaluate policy performance in safety-critical environments.</p>
+                        <a href="https://github.com/ryanyychen/cse-190-final-project" target="_blank" class="inline-flex items-center px-4 py-2 mt-3 text-sm font-medium text-emerald-500 bg-gray-700 border border-emerald-500 rounded-lg hover:bg-emerald-500 hover:text-white transition-all duration-200">
+                            <i class="fab fa-github mr-2"></i>View on GitHub
+                        </a>
+                    </div>
+                    <!-- Project 2 -->
+                    <div>
+                        <h3 class="text-lg font-bold text-white">Neural Network from Scratch</h3>
+                        <p class="mt-2 text-gray-400">Built a neural network from scratch using only NumPy and math libraries. Achieved 84% accuracy on the MNIST handwritten digits dataset, a significant improvement over the 10% baseline.</p>
+                        <a href="https://github.com/sydney-su/Neural-Network" target="_blank" class="inline-flex items-center px-4 py-2 mt-3 text-sm font-medium text-emerald-500 bg-gray-700 border border-emerald-500 rounded-lg hover:bg-emerald-500 hover:text-white transition-all duration-200">
+                            <i class="fab fa-github mr-2"></i>View on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
     </div>
 
-    <h4>my cool resume (aka colors, pictures, more in-depth descriptions) coming soon...</h4>
-    
-    
-
-<script src="popup.js"></script>
 </body>
-
-
 </html>

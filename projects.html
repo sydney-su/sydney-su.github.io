@@ -1,54 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
 <head>
-    <title>Sydney Su - Projects</title> <!-- the content here will only show in the tab and in the metadata about the page -->
-    <link rel="icon" href="media\compass.png">
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="reset.css" rel="stylesheet" type="text/css" />
-    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <title>Sydney Su - Projects</title>
+    <link href="css/shared-styles.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 
 <body>
     <nav>
         <div class="nav-container">
-            <span class="name">Sydney Su</span>
+            <a href="index.html" class="nav-brand">Sydney Su</a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="resume.html">Resume</a></li>
-                <li><a href="projects.html"><span style="color: #f8bc0a;">Projects</span></a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
                 <li><a href="research.html">Research</a></li>
             </ul>
         </div>
     </nav>
-    
 
-    <div class="buttons-container">
-        <button type="button" onclick="window.open('https://github.com/sydney-su/BookNexus', '_blank')">
-            BookNexus
-        </button>
-        <button type="button" onclick="window.open('https://github.com/sydney-su/Breast-Cancer-Classification', '_blank')">
-            Breast Cancer Classification
-        </button>
-        <button type="button" onclick="window.open('https://github.com/sydney-su/License-Plate-Recognition', '_blank')">
-            License Plate Recognition
-        </button>
-        <button type="button" onclick="window.open('https://github.com/sydney-su/Neural-Network', '_blank')">
-            Neural Network
-        </button>
-        <button type="button" onclick="window.open('https://github.com/sydney-su/TritonWayfinder', '_blank')">
-            TritonWayfinder
-        </button>
-        <button type="button" onclick="window.open('https://github.com/sydney-su/TritonCourseBot', '_blank')">
-            TritonCourseBot
-        </button>
+    <div class="container">
+        <div class="content-section">
+            <h1><i class="fas fa-code"></i> My Projects</h1>
+            <p>Explore my software development and machine learning projects. Each project represents a unique challenge and learning opportunity.</p>
+            
+            <div class="buttons-container">
+                <a href="https://github.com/sydney-su/BookNexus" target="_blank" class="btn">
+                    <i class="fab fa-github"></i> BookNexus
+                </a>
+                <a href="https://github.com/sydney-su/Breast-Cancer-Classification" target="_blank" class="btn">
+                    <i class="fas fa-microscope"></i> Breast Cancer Classification
+                </a>
+                <a href="https://github.com/sydney-su/License-Plate-Recognition" target="_blank" class="btn">
+                    <i class="fas fa-camera"></i> License Plate Recognition
+                </a>
+                <a href="https://github.com/sydney-su/Neural-Network" target="_blank" class="btn">
+                    <i class="fas fa-brain"></i> Neural Network
+                </a>
+                <a href="https://github.com/sydney-su/TritonWayfinder" target="_blank" class="btn">
+                    <i class="fas fa-map-marked-alt"></i> TritonWayfinder
+                </a>
+                <a href="https://github.com/sydney-su/TritonCourseBot" target="_blank" class="btn">
+                    <i class="fas fa-robot"></i> TritonCourseBot
+                </a>
+                <a href="https://github.com/ryanyychen/cse-190-final-project" target="_blank" class="btn">
+                    <i class="fas fa-traffic-light"></i> Multi-Agent Intersection Simulation
+                </a>
+            </div>
+        </div>
     </div>
-    
-
 </body>
-
-
 </html>

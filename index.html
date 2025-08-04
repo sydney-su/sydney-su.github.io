@@ -1,23 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
 <head>
-    <title>Sydney Su - Home</title> <!-- the content here will only show in the tab and in the metadata about the page -->
-    <link rel="icon" href="media\compass.png">
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="reset.css" rel="stylesheet" type="text/css" />
-    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <title>Sydney Su - Home</title>
+    <link href="css/shared-styles.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-section {
+            text-align: center;
+            padding: 4rem 0 2rem 0;
+        }
+        
+        .hero-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 4px solid #10b981;
+            object-fit: cover;
+            margin: 0 auto 2rem auto;
+            display: block;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .intro-text {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto 3rem auto;
+            color: #d1d5db;
+        }
+        
+        .tech-interests {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .tech-item {
+            background: linear-gradient(135deg, #10b981, #059669);
+            padding: 1rem 1.5rem;
+            border-radius: 1rem;
+            color: white;
+            font-weight: 600;
+            text-align: center;
+            min-width: 150px;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+        }
+        
+        .hobbies-section {
+            margin: 4rem 0;
+        }
+        
+        .hobbies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .hobby-card {
+            background-color: #1f2937;
+            border-radius: 1rem;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .hobby-card:hover {
+            transform: translateY(-5px);
+            border-color: #10b981;
+            box-shadow: 0 15px 35px rgba(16, 185, 129, 0.2);
+        }
+        
+        .hobby-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1rem auto;
+            background: #374151;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #10b981;
+        }
+        
+        .hobby-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+        
+        .hobby-desc {
+            color: #9ca3af;
+            font-size: 0.9rem;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #1f2937, #374151);
+            border-radius: 1.5rem;
+            padding: 3rem;
+            text-align: center;
+            margin: 3rem 0;
+            border: 2px solid #10b981;
+        }
+        
+        .cta-title {
+            font-size: 2rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-text {
+            font-size: 1.1rem;
+            color: #d1d5db;
+            margin-bottom: 2rem;
+        }
+        
+        .quick-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #10b981;
+            display: block;
+        }
+        
+        .stat-label {
+            color: #9ca3af;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-image {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .intro-text {
+                font-size: 1.1rem;
+            }
+            
+            .tech-interests {
+                gap: 1rem;
+            }
+            
+            .quick-stats {
+                gap: 2rem;
+            }
+            
+            .cta-section {
+                padding: 2rem;
+            }
+        }
+    </style>
 </head>
-
 
 <body>
     <nav>
         <div class="nav-container">
-            <span class="name">Sydney Su</span>
+            <a href="index.html" class="nav-brand">Sydney Su</a>
             <ul class="nav-links">
-                <li><a href="index.html"><span style="color: #f8bc0a;">Home</span></a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="resume.html">Resume</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="research.html">Research</a></li>
@@ -25,14 +186,125 @@
         </div>
     </nav>
 
-    
-    <h4>Hi, I'm Sydney!<br>
-        I’m passionate about Machine Learning, Data Analysis, and Software Engineering.<br>
-        I am committed to serving my community by leveraging technology to solve meaningful problems.<br>
-        Whether through professional work or personal projects, I'm always eager to learn, build, and collaborate.<br>
-        Outside of tech, you’ll find me cooking, running, playing volleyball, or goofing around with my dog :)</h4>
-    
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <img src="images/profilepic.jpeg" alt="Sydney Su" class="hero-image">
+            <h1>Hi, I'm <span style="color: #10b981;">Sydney</span>! 👋</h1>
+            <p class="intro-text">
+                I'm a passionate <strong>Computer Science student</strong> at UC San Diego, dedicated to leveraging technology to solve meaningful problems and serve my community.
+            </p>
+            
+            <div class="tech-interests">
+                <div class="tech-item">
+                    <i class="fas fa-brain"></i><br>Machine Learning
+                </div>
+                <div class="tech-item">
+                    <i class="fas fa-chart-line"></i><br>Data Analysis
+                </div>
+                <div class="tech-item">
+                    <i class="fas fa-code"></i><br>Software Engineering
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Stats -->
+        <div class="quick-stats">
+            <div class="stat-item">
+                <span class="stat-number">6</span>
+                <span class="stat-label">Years Coding</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">2</span>
+                <span class="stat-label">Internships</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">1</span>
+                <span class="stat-label">Published Paper</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">6+</span>
+                <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">3.98</span>
+                <span class="stat-label">GPA</span>
+            </div>
+        </div>
+
+        <!-- Professional Mission -->
+        <div class="card">
+            <h2><i class="fas fa-target"></i> My Mission</h2>
+            <p style="font-size: 1.1rem; text-align: center;">
+                Whether through professional work or personal projects, I'm always eager to <strong>learn</strong>, <strong>build</strong>, and <strong>collaborate</strong>. 
+                I believe in using technology as a force for good and am committed to making a positive impact in everything I do.
+            </p>
+        </div>
+
+        <!-- Hobbies Section -->
+        <div class="hobbies-section">
+            <h2 style="text-align: center;">Beyond the Code</h2>
+            <p style="text-align: center; margin-bottom: 2rem; color: #9ca3af;">
+                When I'm not at my computer, you'll find me pursuing these passions:
+            </p>
+            
+            <div class="hobbies-grid">
+                <div class="hobby-card">
+                    <div class="hobby-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="hobby-title">Cooking</div>
+                    <div class="hobby-desc">Experimenting and cooking delicious meals</div>
+                </div>
+                
+                <div class="hobby-card">
+                    <div class="hobby-icon">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <div class="hobby-title">Running</div>
+                    <div class="hobby-desc">Staying active and pursing my marathon ambitions</div>
+                </div>
+                
+                <div class="hobby-card">
+                    <div class="hobby-icon">
+                        <i class="fas fa-volleyball-ball"></i>
+                    </div>
+                    <div class="hobby-title">Volleyball</div>
+                    <div class="hobby-desc">Having fun while engaging in competitive volleyball</div>
+                </div>
+                
+                <div class="hobby-card">
+                    <div class="hobby-icon">
+                        <i class="fas fa-dog"></i>
+                    </div>
+                    <div class="hobby-title">Dog Adventures</div>
+                    <div class="hobby-desc">Goofing around with my dog, Pepper</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="cta-section">
+            <h2 class="cta-title">Let's Connect & Collaborate!</h2>
+            <p class="cta-text">
+                Interested in my work? Want to collaborate on a project? Or just want to chat about tech and life?
+            </p>
+            
+            <div class="buttons-container">
+                <a href="resume.html" class="btn">
+                    <i class="fas fa-file-alt"></i> View My Resume
+                </a>
+                <a href="projects.html" class="btn btn-secondary">
+                    <i class="fas fa-code"></i> Explore Projects
+                </a>
+                <a href="research.html" class="btn btn-secondary">
+                    <i class="fas fa-microscope"></i> Research Work
+                </a>
+                <a href="mailto:scsu@ucsd.edu" class="btn" style="background-color: #374151;">
+                    <i class="fas fa-envelope"></i> Get In Touch
+                </a>
+            </div>
+        </div>
+    </div>
 </body>
-
-
 </html>
